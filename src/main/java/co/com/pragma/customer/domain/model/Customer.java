@@ -1,12 +1,11 @@
 package co.com.pragma.customer.domain.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 
 @Builder
 public record Customer(
-  Long idCustomer,
-  DocumentType documentType,
-  String documentNumber,
+  Long customerId,
   String fullName,
   String accessPassword,
   Float income,
