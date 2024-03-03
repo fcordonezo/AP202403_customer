@@ -30,7 +30,6 @@ public class CustomerJpaAdapter implements CustomerPersistencePort {
   @Override
   public Customer findById(Long idCustomer) {
     CustomerEntity customer = customerRepository.findById(idCustomer).orElseThrow();
-    System.out.println(customerEntityMapper.toCustomer(customer));
     return customerEntityMapper.toCustomer(customer);
   }
 
