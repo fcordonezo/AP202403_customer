@@ -8,7 +8,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity(name = "customer")
-@Setter
 public class CustomerEntity {
 
   @Id
