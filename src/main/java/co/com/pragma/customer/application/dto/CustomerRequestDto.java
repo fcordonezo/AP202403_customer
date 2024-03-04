@@ -8,6 +8,7 @@ public record CustomerRequestDto(
   String accessPassword,
   Float income,
   String city,
+  String countryCode,
   Integer age
 ) {
 }

@@ -8,6 +8,7 @@ public record CustomerResponseDto(
   String fullName,
   Float income,
   String city,
+  String countryCode,
   Integer age
 ) {
 }

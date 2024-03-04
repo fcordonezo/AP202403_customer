@@ -27,6 +27,9 @@ public class CustomerEntity {
   @Column(name = "city")
   private String city;
 
+  @Column(name = "country_code")
+  private String countryCode;
+
   @Column(name = "age")
   private Integer age;
 

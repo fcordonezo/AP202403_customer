@@ -14,6 +14,7 @@ public class CustomerEntityMapper {
       .accessPassword(entity.getAccessPassword())
       .income(entity.getIncome())
       .city(entity.getCity())
+      .countryCode(entity.getCountryCode())
       .age(entity.getAge())
       .build();
   }
@@ -24,6 +25,7 @@ public class CustomerEntityMapper {
       .accessPassword(customer.accessPassword())
       .income(customer.income())
       .city(customer.city())
+      .countryCode(customer.countryCode())
       .age(customer.age())
       .build();
   }
