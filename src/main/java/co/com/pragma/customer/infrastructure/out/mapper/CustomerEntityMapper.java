@@ -29,4 +29,16 @@ public class CustomerEntityMapper {
       .age(customer.age())
       .build();
   }
+
+  public Customer addCustomerId(Customer customer, Long CustomerId) {
+    return Customer.builder()
+      .customerId(CustomerId)
+      .fullName(customer.fullName())
+      .accessPassword(customer.accessPassword())
+      .income(customer.income())
+      .city(customer.city())
+      .countryCode(customer.countryCode())
+      .age(customer.age())
+      .build();
+  }
 }

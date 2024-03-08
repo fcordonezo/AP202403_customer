@@ -24,7 +24,7 @@ public class CustomerJpaAdapter implements CustomerPersistencePort {
 
   @Override
   public List<Customer> findAll() {
-    return null;
+    return customerRepository.findAll().stream().map(customerEntityMapper::toCustomer).toList();
   }
 
   @Override
@@ -35,11 +35,22 @@ public class CustomerJpaAdapter implements CustomerPersistencePort {
 
   @Override
   public Customer save(Customer customer) {
-    return null;
+    return customerEntityMapper.toCustomer(customerRepository.save(customerEntityMapper.toCustomerEntity(customer)));
   }
 
   @Override
-  public void delete(Customer customer) {
+  public Customer update(Customer customer, Long customerId) {
+    return this.customerEntityMapper.toCustomer(
+      customerRepository.save(
+        customerEntityMapper.toCustomerEntity(
+          customerEntityMapper.addCustomerId(customer, customerId)
+        )
+      )
+    );
+  }
 
+  @Override
+  public void delete(Long customerId) {
+    customerRepository.deleteById(customerId);
   }
 }

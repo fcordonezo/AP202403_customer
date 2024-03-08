@@ -8,5 +8,6 @@ public interface CustomerPersistencePort {
   List<Customer> findAll();
   Customer findById(Long idCustomer);
   Customer save(Customer customer);
-  void delete(Customer customer);
+  Customer update(Customer customer, Long idCustomer);
+  void delete(Long customerId);
 }
