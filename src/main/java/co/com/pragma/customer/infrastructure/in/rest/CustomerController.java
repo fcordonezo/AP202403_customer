@@ -4,6 +4,7 @@ import co.com.pragma.customer.application.dto.CustomerRequestDto;
 import co.com.pragma.customer.application.dto.CustomerResponseDto;
 import co.com.pragma.customer.application.handler.CustomerHandler;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@SecurityRequirement(name = "BearerAuthentication")
 public class CustomerController {
   private final CustomerHandler customerHandler;
 
