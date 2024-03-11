@@ -2,6 +2,7 @@ package co.com.pragma.customer.infrastructure.out.mapper;
 
 import co.com.pragma.customer.domain.model.Customer;
 import co.com.pragma.customer.infrastructure.out.entity.CustomerEntity;
+import org.apache.commons.codec.digest.Sha2Crypt;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -22,7 +23,7 @@ public class CustomerEntityMapper {
     return CustomerEntity.builder()
       .customerId(customer.customerId())
       .fullName(customer.fullName())
-      .accessPassword(customer.accessPassword())
+      .accessPassword(Sha2Crypt.sha256Crypt(customer.accessPassword().getBytes()))
       .income(customer.income())
       .city(customer.city())
       .countryCode(customer.countryCode())
