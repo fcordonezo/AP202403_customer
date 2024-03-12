@@ -102,6 +102,8 @@ antes de ser almacenada en base de datos. La función matemática de Hash emplea
 ### Dominio de datos
 
 ### Contrato Openapi 3.0.1
+
+La firma puede ser encontrada en **[esta página](https://fcordonezo.github.io/AP202403_customer/)**
 ``` yaml
 openapi: 3.0.1
 info:
